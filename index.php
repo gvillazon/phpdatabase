@@ -1,9 +1,19 @@
+<html>
+<body>
 <?php
+$dbhost = getenv("DATABASE_SERVICE_NAME");
+$dbuser = getenv("MYSQL_USER");
+$dbpwd = getenv("MYSQL_PASSWORD");
+$dbname = getenv("MYSQL_DATABASE");
 
-echo "Welcome to OpenShift Online Developer Preview";
-echo "<br>To test the database, hit the dbtest.php URL";
-
-
-echo "<br><br>This assumes that you have the correct env variables set";
-echo "<BR><BR>The environment variables required are MYSQL_USER, MYSQL_PASSWORD, and MYSQL_DATABASE.";
-
+$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+if ($connection->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+} else {
+    printf("Connected to the database");
+}
+$connection->close();
+?>
+</body>
+</html>
