@@ -1,34 +1,32 @@
 <html>
- <head>
-  <title>PHP Test</title>
- </head>
- <body>
- <?php echo '<p>Hello World</p>';
- $servername = "172.25.35.20";
- $username = "root";
- $password = "Ntrvl12#";
- $dbname = "db";
 
-// Create connection
- $conn = new mysqli($servername, $username, $password, $dbname);
+<head>
+<title>Hello World!</title>
+</head>
 
-// Check connection
- if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
- } 
- echo "Connected successfully<br><br>";
- $sql = "SELECT PersonID, LastName, FirstName FROM Persons";
-$result = $conn->query($sql);
+<body>
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "PersonID: " . $row["PersonID"]. " - LastName: " . $row["LastName"]. " " . $row["FirstName"]. "<br>";
+<?php echo "Hello World!"; ?>
+<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?><br /><br />
+
+<?php $links = [];
+  foreach($_ENV as $key => $value) {
+    if(preg_match("/^(.*)_PORT_([0-9]*)_(TCP|UDP)$/", $key, $matches)) {
+      $links[] = [
+        "name"  => $matches[1],
+        "port"  => $matches[2],
+        "proto" => $matches[3],
+        "value" => $value
+      ];
     }
-} else {
-    echo "0 results";
+  }
+  if($links) {
+    foreach($links as $link) {
+      echo $link["name"]; ?>  listening on port <?php echo $link["port"]+"/"+$link["proto"]; ?> available at <?php echo $link["value"]; ?><br /><?php
+    }
+  }
 }
-$conn->close(); 
- ?> 
- </body>
+?>
+
+</body>
 </html>
