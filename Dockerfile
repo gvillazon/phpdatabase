@@ -13,7 +13,7 @@ COPY ./ostack.repo /etc/yum.repos.d/
 
 # Define environment variable
 #RUN yum repolist
-RUN yum -i install httpd
+RUN yum -y install httpd
 
 #RUN yum -y install httpd php php-common
 #RUN yum -y install php-cli php-pear php-pdo php-mysqlnd php-gd php-mbstring php-mcrypt php-xml php-mysqli
