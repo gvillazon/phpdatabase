@@ -1,0 +1,90 @@
+[oshift310]
+baseurl = http://bliyums01.ii-corpnet.com/rhel-7-server-ose-3.10-rpms
+name = oshift310
+enabled = 0
+gpgcheck = 0
+
+[oshift310-next]
+baseurl = http://bliyums01.ii-corpnet.com/rhel-7-fast-datapath-3.10-rpms
+name = oshift310-next
+enabled = 0
+gpgcheck = 0
+
+[oshift39]
+baseurl = http://bliyums01.ii-corpnet.com/rhel-7-server-ose-3.9-rpms
+name = oshift39
+enabled = 0
+gpgcheck = 0
+
+[oshift38]
+baseurl = http://bliyums01.ii-corpnet.com/rhel-7-server-ose-3.8-rpms
+name = oshift38
+enabled = 0
+gpgcheck = 0
+
+[docker-ce]
+baseurl = http://bliyums01.ii-corpnet.com/docker-ce-stable
+name = docker-ce
+enabled = 0
+gpgcheck = 0
+
+[extras]
+baseurl = http://bliyums01.ii-corpnet.com/rhel-7-server-extras-rpms
+name = extras
+enabled = 1
+gpgcheck = 0
+
+[rh73]
+baseurl = http://bliyums01.ii-corpnet.com/rh73
+name = rh73
+enabled = 1
+gpgcheck = 0
+
+[rh75]
+baseurl = http://bliyums01.ii-corpnet.com/rh75
+name = rh75
+enabled = 0
+gpgcheck = 0
+
+[rh74]
+baseurl = http://bliyums01.ii-corpnet.com/rh74
+name = rh74
+enabled = 0
+gpgcheck = 0
+
+[rhel-7-server-ansible-2.4-rpms]
+baseurl = http://bliyums01.ii-corpnet.com/rhel-7-server-ansible-2.4-rpms
+name = rhel-7-server-ansible-2.4-rpms
+enabled = 0
+gpgcheck = 0
+
+[epel7]
+baseurl = http://bliyums01.ii-corpnet.com/epel7
+name = epel7
+enabled = 0
+gpgcheck = 0
+
+[rhev]
+baseurl = http://bliyums01.ii-corpnet.com/rhev4.1
+name = rhev
+enabled = 0
+gpgcheck = 0
+
+[rhev-agent]
+baseurl = http://bliyums01.ii-corpnet.com/rhel-7-server-rh-common-rpms
+name = rhev-agent
+enabled = 0
+gpgcheck = 0
+
+[Ostack13]
+baseurl = http://bliyums01.ii-corpnet.com/OSTACK13
+name = Ostack13
+enabled = 0
+gpgcheck = 0
+
+[rhscl-7-rpms]
+baseurl = http://bliyums01.ii-corpnet.com/source-to-image
+name = rhel7-rhscl
+enabled = 0
+gpgcheck = 0
+
